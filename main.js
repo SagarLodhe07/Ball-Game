@@ -21,7 +21,6 @@ const color = [
 // }
 const game_area = document.querySelector("#game");
 console.log(getComputedStyle(game_area).getPropertyValue("width"));
-const score = 0
 function create_Ball() {
 
   let size = Math.floor(Math.random() * 60);
@@ -34,13 +33,10 @@ function create_Ball() {
   ball.textContent = Math.floor(Math.random() * 10);
   ball.style.backgroundColor = color[Math.floor(Math.random() * color.length)];
   game_area.appendChild(ball);
- score =+ ball.textContent;
 
   setTimeout(() => {
     ball.remove();
   }, 5000);
 }
 
-// setInterval(create_Ball,()=>{
-
-})
+setInterval(create_Ball,400)
