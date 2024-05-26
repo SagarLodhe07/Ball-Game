@@ -13,7 +13,6 @@ const color = [
 ];
 
 const game_area = document.querySelector("#game");
-console.log(getComputedStyle(game_area).getPropertyValue("width"));
 function create_Ball() {
 
   let size = Math.floor(Math.random() * 60);
